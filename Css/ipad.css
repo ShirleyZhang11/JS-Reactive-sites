@@ -1,0 +1,243 @@
+@keyframes rotateMusic {
+    from{
+      -webkit-transform:rotate(0deg );
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+   }
+    to{
+     -webkit-transform:rotate(360deg );
+     -moz-transform: rotate(360deg);
+     -ms-transform: rotate(360deg);
+     -o-transform: rotate(360deg);
+     transform: rotate(360deg);
+    }
+}
+body,ul,li,div,input,header,aside,footer{
+    margin:0;
+    padding:0;
+    cursor:default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+li{
+    list-style: none;
+}
+
+.header-top{
+    width: 100%;
+    height: 60px;
+    position:fixed;
+    background:#3c3f41;
+    top:0;
+    left:0;
+}
+.header-logo{
+    width: 60px;
+    height: 60px;
+    background:gray;
+    text-align:center;
+    line-height:60px;
+    color:white;
+}
+/*下拉列表*/
+.header-push{
+    width: 300px;
+    height: 400px;
+    position:absolute;
+    top:-400px;
+    left:60px;
+    background:black;
+    -webkit-transition:top 1s;
+    -moz-transition:top 1s ;
+    -ms-transition: top 1s;
+    -o-transition:top 1s;
+    transition: top 1s;
+    z-index:2;
+
+}
+.header-push-button{
+    width: 50px;
+    height: 60px;
+    background: #3c3f41;
+    color:white;
+    text-align:center;
+    line-height:60px;
+    position:absolute;
+    top:400px;
+    left:0;
+}
+.header-push-button:hover{
+    background: lightgray;
+}
+.header-push:hover{
+    top:0;
+}
+.header-search{
+    width: 250px;
+    height: 60px;
+    position:absolute;
+    top:0;
+    left:130px;
+}
+.header-search input{
+    width: 250px;
+    height: 60px;
+    border: none;
+    background:transparent;  /*背景透明*/
+    outline:none;
+}
+/*用户详情面板*/
+.header-user{
+  display: none;
+}
+.header-user:hover{
+    top:0;
+}
+/*左边栏*/
+.aside-left{
+    width:60px;
+    height:100%;
+    position:fixed;
+    top:60px;
+    left:0;
+    bottom:80px;
+    background:#3c3f41;
+    /*overflow:scroll;*/
+}
+.aside-left ul li{
+    width:120px;
+    height:60px;
+    color:white;
+    text-align:center;
+    line-height:80px;
+    position:relative;
+    left:-60px;
+    background:#3c3f41;
+    -webkit-transition: left 0.5s;
+    -moz-transition: left 0.5s;
+    -ms-transition: left 0.5s;
+    -o-transition: left 0.5s;
+    transition: left 0.5s;
+}
+.aside-left ul li div{
+    width:60px;
+    height:60px;
+    float:left;
+}
+.aside-left ul li:hover{
+    left:0;
+}
+/*主体显示区域*/
+.section-body{
+	width:100%;
+	/*background: black;*/
+	position:absolute;
+	top:60px;
+	left:60px;
+	bottom: 80px;
+	z-index: -10;/*让图片在下面显示*/
+}
+.lunbotu{
+	width: 100%;
+	height: 30%;
+	position:absolute;
+	top:0;
+	left:0;
+	background:yellow;
+}
+.lunbotu ul{
+	position:absolute;
+}
+.lunbotu ul li{
+	float: left;
+}
+
+/*底部*/
+.footer-body{
+    width: 100%;
+    height:80px;
+    position:fixed;
+    bottom:0;
+    left:0;
+    background:gray;
+}
+.footer-music-image{
+    width: 70px;
+    height:70px;
+    background:url("../img/music.jpg");
+    background-size:70px 70px;
+    position:absolute;
+    top:2px;
+    left:2px;
+    -webkit-animation: rotateMusic 5s;
+    -o-animation: rotateMusic 5s;
+    animation: rotateMusic 5s;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+
+}
+.footer-image{
+    width: 74px;
+    height: 74px;
+    position:absolute;
+    top:3px;
+    left:3px;
+    background:-webkit-linear-gradient(white,blue);
+    background:-moz-linear-gradient(white,blue);
+    background:-ms-linear-gradient(white,blue);
+    background:-o-linear-gradient(white,blue);
+    background:linear-gradient(white,blue);
+    border-radius:37px;
+}
+.controls-panner{
+    width: 240px;
+    height: 80px;
+    /*background:black;*/
+    position:absolute;
+     top:0;
+    left: 80px;
+}
+.controls-panner div{
+    float: left;
+    width:60px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+}
+.controls-panner div:nth-child(2){
+
+    line-height: 90px;
+}
+.footer-progress{
+   width: 100%;
+    height: 6px;
+    position:absolute;
+    top:0;
+    left:0;
+    /*background:black;*/
+}
+.footer-progress-bar{
+    width:100%;
+    height:6px;
+    position:static;
+    border:none;
+    background:-webkit-linear-gradient(darkgray,white,gray);
+    background:-moz-linear-gradient(darkgray,white,gray);
+    background:-ms-linear-gradient(darkgray,white,gray);
+    background:-o-linear-gradient(darkgray,white,gray);
+    background:linear-gradient(darkgray,white,gray);
+   
+}
